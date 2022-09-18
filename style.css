@@ -1,0 +1,84 @@
+body {
+  width: auto;
+  margin: auto;
+}
+
+.heading_img {
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.main_input {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 68px;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 6px -6px grey inset;
+  padding-left: 30px;
+}
+
+.main_input i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 16px;
+  font-size: 120%;
+}
+
+.main_input input {
+  border: none;
+  background-color: #eaeaea;
+  font-size: 20px;
+  width: 200px;
+  box-shadow: 0px 4px 6px -6px grey inset;
+  font-size: 18px;
+}
+
+h1 {
+  margin: auto;
+  width: 250px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-family: "Roboto";
+  font-size: 26px;
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+  color: gray;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: initial;
+  padding-bottom: 30px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 240px;
+  height: 52px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: white;
+  border: none;
+}
+
+.lineaire_simple {
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+/*# sourceMappingURL=style.css.map */
