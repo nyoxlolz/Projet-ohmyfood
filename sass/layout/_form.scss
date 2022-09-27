@@ -1,0 +1,30 @@
+.main_input {
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 68px;
+    background-color: #eaeaea;
+    box-shadow: 0px 4px 6px -6px grey inset;
+    padding-left: 30px;
+}
+
+.main_input i {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 16px;
+    font-size: 120%;
+
+}
+
+.main_input input {
+
+    border: none;
+    background-color: #eaeaea;
+    font-size: 20px;
+    width: 200px;
+    box-shadow: 0px 4px 6px -6px grey inset;
+    font-size: 18px;
+}
