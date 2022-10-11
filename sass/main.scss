@@ -1,16 +1,18 @@
-@import "./page/home";
-@import "./page/restaurant";
+@import "./utils/variable";
+@import "./utils/fonction";
+@import "./utils/mixin";
+
+@import "./base/reset";
+@import "./base/typography";
+
 
 @import "./components/buttons";
-
-@import "./base/typography";
-@import "./base/reset";
+@import "./components/circle";
+@import "./components/banniere";
 
 @import "./layout/footer";
 @import "./layout/header";
 @import "./layout/form";
-@import "./layout/section";
 
-@import "./utils/fonction";
-@import "./utils/mixin";
-@import "./utils/variable";
+@import "./page/home";
+@import "./page/restaurant";

@@ -1,5 +1,81 @@
 h1 {
 
+    font-family: "Shrikhand";
+    text-align: center;
+
+}
+
+h2 {
+
+    font-size: 23px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-right: 246px;
+    font-family: "Roboto";
+
+    & i {
+
+        position: absolute;
+        right: 30px;
+    }
+}
+
+h2.modif_title {
+
+    font-family: "Shrikhand";
+    font-size: 28px;
+    font-weight: normal;
+    margin: 50px 0 30px 0px;
+
+}
+
+h3 {
+
+    font-size: 17px;
+    font-family: "Roboto";
+    color: black;
+    text-decoration: none;
+    margin: 14px 0 5px 10px;
+
+    & i {
+
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        font-size: 22px;
+
+    }
+}
+
+h4 {
+
+    font-family: "Shrikhand";
+    color: white;
+    font-size: 16px;
+    font-weight: initial;
+    padding: 16px 0 0 20px;
+    margin: 0 0 0 0;
+
+}
+
+p {
+
+    color: #606060;
+    font-family: "Roboto";
+    margin: 0 0 0 10px;
+    width: 176px;
+
+    & span {
+
+        position: absolute;
+        right: 25px;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+p.modif {
+
     margin: auto;
     width: 250px;
     text-align: center;
@@ -7,19 +83,73 @@ h1 {
     padding-bottom: 10px;
     font-family: "Roboto";
     font-size: 26px;
+    color: black;
+    font-weight: bold;
 }
 
-h2 {
+p.alternative {
     margin: auto;
     text-align: center;
     color: gray;
     font-family: "Roboto";
     font-size: 20px;
     font-weight: initial;
-    padding-bottom: 30px;
+    width: 100%;
 }
 
-h3 {
+p.retour {
 
-    font-size: 26px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.menu_boxsize p {
+
+    margin-left: 20px;
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    padding-bottom: 4px;
+}
+
+.tile_menu p {
+
+    margin-left: 10px;
+    width: auto;
+    border-bottom: none;
+}
+
+ul {
+
+    color: white;
+    padding: 0 0 0 20px;
+    font-family: 'Roboto';
+    list-style-type: none;
+    line-height: 1.7;
+    font-size: 12px;
+
+}
+
+a {
+
+    color: white;
+    text-decoration: none;
+}
+
+.fa-cutlery:before,
+.fa-utensils:before {
+    content: "\f2e7";
+    font-size: 11px;
+}
+
+.fa-hands-helping:before,
+.fa-handshake-angle:before {
+    content: "\f4c4";
+    font-size: 8px;
+}
+
+.fa-mobile-alt:before,
+.fa-mobile-screen-button:before {
+    content: "\f3cd";
+    font-size: large;
 }

@@ -1,0 +1,72 @@
+body {
+
+    margin: auto;
+    width: auto;
+    position: relative;
+
+}
+
+.restaurant {
+
+    background-size: 435px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 80px;
+}
+
+img {
+
+    width: 100%;
+    margin: auto;
+}
+
+.menu_boxsize {
+
+    display: flex;
+    flex-direction: column;
+    height: 1275px;
+    width: 100%;
+    margin: auto;
+    background-color: #f6f6f6;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.modif_size {
+
+    height: 1346px
+}
+
+.container_entree_size {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 335px;
+    width: 95%;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 35px;
+
+}
+
+.container_plat_size {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    width: 95%;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 40px;
+
+}
+
+.tile_menu {
+
+    height: 72px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 1px 4px 10px 0px #e7e7e7;
+}
