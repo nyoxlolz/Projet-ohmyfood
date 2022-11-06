@@ -1,0 +1,60 @@
+/*ICONE FOOTER*/
+.fa-cutlery:before,
+.fa-utensils:before {
+    content: "\f2e7";
+    font-size: 11px;
+    padding-left: 0px;
+}
+
+/*ICONE FOOTER*/
+.fa-hands-helping:before,
+.fa-handshake-angle:before {
+    content: "\f4c4";
+    font-size: 8px;
+    padding-left: 0px;
+}
+
+/*ICONE COCHE*/
+
+.fa-check:before {
+    content: "\f00c";
+    color: #99e2d0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.icone_position {
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+
+    @media screen and (min-width:1024px) {
+
+        max-width: 100%;
+        position: absolute;
+        justify-content: space-evenly;
+
+    }
+
+    & i {
+
+        font-size: 25px;
+
+
+        @media screen and (min-width:1024px) {
+
+            font-size: 35px;
+
+        }
+    }
+}
+
+.icone_card_position {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

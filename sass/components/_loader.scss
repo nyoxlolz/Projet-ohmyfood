@@ -1,0 +1,32 @@
+.loader {
+
+    background-color: aqua;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #9356DC;
+    border-left: 10px solid #FF79DA;
+    border-right: 10px solid #99E2D0;
+    border-bottom: 10px solid white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-delay: 150ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.loading {
+
+    align-content: center;
+}
