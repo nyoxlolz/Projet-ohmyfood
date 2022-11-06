@@ -1,3 +1,84 @@
+@keyframes left-right {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes apparition-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes movement_coche {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+    /*transform: translateX(60px);*/
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(0.5);
+    /*transform: translateX(35px);*/
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+    /*transform: translateX(0px); */
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -189,14 +270,7 @@ select {
 button,
 [type=button],
 [type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-
-/**
-   * Remove the inner border and padding in Firefox.
-   */
-button::-moz-focus-inner,
+[type=submit] button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner {
@@ -280,37 +354,7 @@ textarea {
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-[type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/* Interactive
-     ========================================================================== */
-/*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-details {
+[type=search] [type=search]::-webkit-search-decoration ::-webkit-file-upload-button details {
   display: block;
 }
 
@@ -340,6 +384,12 @@ template {
 h1 {
   font-family: "Shrikhand";
   text-align: center;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
 }
 
 h2 {
@@ -349,9 +399,13 @@ h2 {
   margin-right: 246px;
   font-family: "Roboto";
 }
-h2 i {
-  position: absolute;
-  right: 30px;
+@media screen and (min-width: 768px) {
+  h2 {
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+  }
 }
 
 h2.modif_title {
@@ -359,6 +413,12 @@ h2.modif_title {
   font-size: 28px;
   font-weight: normal;
   margin: 50px 0 30px 0px;
+}
+@media screen and (min-width: 1024px) {
+  h2.modif_title {
+    font-size: 36px;
+    margin: 0;
+  }
 }
 
 h3 {
@@ -370,9 +430,22 @@ h3 {
 }
 h3 i {
   position: absolute;
-  right: 10px;
+  right: -8%;
   top: 25px;
   font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  h3 i {
+    position: absolute;
+    left: 190%;
+    top: 25px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h3 {
+    font-size: 18px;
+  }
 }
 
 h4 {
@@ -383,18 +456,18 @@ h4 {
   padding: 16px 0 0 20px;
   margin: 0 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  h4 {
+    text-align: center;
+    font-size: 24px;
+  }
+}
 
 p {
   color: #606060;
   font-family: "Roboto";
   margin: 0 0 0 10px;
-  width: 176px;
-}
-p span {
-  position: absolute;
-  right: 25px;
-  color: black;
-  font-weight: bold;
+  width: 215px;
 }
 
 p.modif {
@@ -408,6 +481,12 @@ p.modif {
   color: black;
   font-weight: bold;
 }
+@media screen and (min-width: 1024px) {
+  p.modif {
+    font-size: 30px;
+    width: 300px;
+  }
+}
 
 p.alternative {
   margin: auto;
@@ -418,24 +497,37 @@ p.alternative {
   font-weight: initial;
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  p.alternative {
+    font-size: 30px;
+  }
+}
 
 p.retour {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 15px;
+  top: 30px;
+  font-size: 20px;
 }
 
 .menu_boxsize p {
-  margin-left: 20px;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 4px;
+}
+
+.body_size h3 {
+  text-align: initial;
+  margin-bottom: 0px;
 }
 
 .tile_menu p {
   margin-left: 10px;
   width: auto;
   border-bottom: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 ul {
@@ -445,39 +537,35 @@ ul {
   list-style-type: none;
   line-height: 1.7;
   font-size: 12px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  ul {
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
-a {
+ul a {
   color: white;
   text-decoration: none;
 }
 
-.fa-cutlery:before,
-.fa-utensils:before {
-  content: "\f2e7";
-  font-size: 11px;
-}
-
-.fa-hands-helping:before,
-.fa-handshake-angle:before {
-  content: "\f4c4";
-  font-size: 8px;
-}
-
-.fa-mobile-alt:before,
-.fa-mobile-screen-button:before {
-  content: "\f3cd";
-  font-size: large;
+span {
+  font-weight: bold;
+  font-family: "Roboto";
 }
 
 button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   margin: auto;
-  margin-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-right: 35px;
+  padding-left: 35px;
   min-width: 190px;
   height: 52px;
   border-radius: 30px;
@@ -485,6 +573,33 @@ button {
   font-family: "Roboto";
   color: white;
   border: none;
+  box-shadow: 4px 6px 15px 3px #c5c5c5;
+}
+button:hover {
+  filter: brightness(1.1);
+  box-shadow: 4px 6px 3px 3px #c5c5c5;
+}
+@media screen and (min-width: 768px) {
+  button {
+    position: initial;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  button {
+    position: initial;
+    font-size: 22px;
+    height: 80px;
+    min-width: 260px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+}
+
+.button_position {
+  position: relative;
+  bottom: 50px;
 }
 
 .lineaire_simple {
@@ -499,22 +614,23 @@ button {
   position: absolute;
   left: 19px;
 }
-
-banniere1 {
-  color: #139273;
-  background-color: #99e2d0;
-  border-radius: 2px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  position: absolute;
-  top: 34px;
-  left: 290px;
-  z-index: 1;
+@media screen and (min-width: 1024px) {
+  .cercle {
+    width: 30px;
+    height: 30px;
+  }
 }
 
-banniere2 {
+.modif_cercle_color {
+  background: white;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner1 {
   color: #139273;
   background-color: #99e2d0;
   border-radius: 2px;
@@ -523,14 +639,120 @@ banniere2 {
   padding-bottom: 5px;
   padding-top: 5px;
   position: absolute;
-  top: 300px;
-  left: 290px;
+  top: 10px;
+  right: 10px;
   z-index: 1;
+  animation-name: left-right;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/*ICONE FOOTER*/
+.fa-cutlery:before,
+.fa-utensils:before {
+  content: "\f2e7";
+  font-size: 11px;
+  padding-left: 0px;
+}
+
+/*ICONE FOOTER*/
+.fa-hands-helping:before,
+.fa-handshake-angle:before {
+  content: "\f4c4";
+  font-size: 8px;
+  padding-left: 0px;
+}
+
+/*ICONE COCHE*/
+.fa-check:before {
+  content: "\f00c";
+  color: #99e2d0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.icone_position {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  .icone_position {
+    max-width: 100%;
+    position: absolute;
+    justify-content: space-evenly;
+  }
+}
+.icone_position i {
+  font-size: 25px;
+}
+@media screen and (min-width: 1024px) {
+  .icone_position i {
+    font-size: 35px;
+  }
+}
+
+.icone_card_position {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coche {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: #99e2d0;
+  height: 72px;
+  width: 60px;
+  position: relative;
+  margin-inline-start: auto;
+  bottom: 61px;
+  /*bottom: 40px;*/
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+.loader {
+  background-color: aqua;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #9356DC;
+  border-left: 10px solid #FF79DA;
+  border-right: 10px solid #99E2D0;
+  border-bottom: 10px solid white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation-name: spin;
+  animation-duration: 2.5s;
+  animation-delay: 150ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.loading {
+  align-content: center;
 }
 
 footer {
-  height: 150px;
+  height: 153px;
   background-color: #353535;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    height: 215px;
+  }
 }
 
 footer i {
@@ -550,10 +772,6 @@ footer i {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-header {
-  position: relative;
 }
 
 .main_input {
@@ -578,14 +796,23 @@ header {
   border: none;
   background-color: #eaeaea;
   font-size: 20px;
-  width: 200px;
+  width: 160px;
   box-shadow: 0px 4px 6px -6px grey inset;
   font-size: 18px;
 }
 
 body {
   margin: auto;
-  width: 100%;
+  width: auto;
+  animation-name: hiding-body;
+  animation-duration: 2000ms;
+  animation-delay: 2000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+body :not(.loader) {
+  opacity: 0;
+  height: 0;
 }
 
 html {
@@ -595,14 +822,22 @@ html {
 .fonctionnement_boxsize {
   gap: 20px;
   width: 100%;
+  max-width: 400px;
   margin: auto;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement_boxsize {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+}
 
 .tile {
+  max-width: 400px;
   width: 88%;
   height: 75px;
   margin: auto;
@@ -615,6 +850,18 @@ html {
   color: black;
   font-family: "Roboto";
   font-weight: 700;
+  font-size: 18px;
+}
+@media screen and (min-width: 1024px) {
+  .tile p {
+    font-size: 20px;
+    width: 234px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tile {
+    height: 105px;
+  }
 }
 
 .inside_tile {
@@ -634,6 +881,27 @@ html {
   font-size: 13px;
   font-family: "Roboto";
 }
+@media screen and (min-width: 1024px) {
+  .inside_tile span {
+    left: 10px;
+    top: -20px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .inside_tile {
+    height: 105px;
+    width: 100%;
+  }
+}
+.inside_tile i {
+  padding-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .inside_tile i {
+    padding-left: 15px;
+  }
+}
 
 .restaurant_boxsize {
   width: 100%;
@@ -642,19 +910,42 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .restaurant_boxsize {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+  }
 }
 
 .sizecard_restaurant {
   height: 245px;
   width: 92%;
+  max-width: 450px;
   margin-top: 20px;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
   box-shadow: 1px 4px 10px 8px #e7e7e7;
+  position: relative;
+  text-decoration: none;
+}
+.sizecard_restaurant i:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-size: 100%;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .sizecard_restaurant {
+    width: 49%;
+    height: 280px;
+  }
 }
 
 .img_size {
@@ -666,15 +957,35 @@ html {
 }
 
 .body_size {
-  height: 55px;
-  width: 87%;
-  position: absolute;
+  height: 73px;
+  width: 92%;
+  text-decoration: none;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .body_size {
+    height: 84px;
+  }
+}
+.body_size i {
+  font-size: 25px;
+  padding-top: 23px;
+  color: black;
+}
+
+svg {
+  width: 6%;
+  padding-top: 22px;
 }
 
 body {
   margin: auto;
   width: auto;
-  position: relative;
+  background-color: #f6f6f6;
+}
+
+main {
+  background-color: #f6f6f6;
 }
 
 .restaurant {
@@ -685,52 +996,179 @@ body {
 }
 
 img {
+  display: block;
   width: 100%;
   margin: auto;
+}
+@media screen and (min-width: 768px) {
+  img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  img {
+    font-size: 22px;
+    width: 60%;
+  }
+}
+
+.modif_note_img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .modif_note_img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modif_note_img {
+    width: 70%;
+  }
 }
 
 .menu_boxsize {
   display: flex;
   flex-direction: column;
-  height: 1275px;
+  margin-bottom: 20px;
   width: 100%;
   margin: auto;
   background-color: #f6f6f6;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  position: relative;
+  bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .menu_boxsize {
+    flex-direction: row;
+    margin-top: 100px;
+  }
+}
+.menu_boxsize i {
+  color: black;
+  font-size: 25px;
+}
+.menu_boxsize i:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-size: 100%;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
 }
 
-.modif_size {
-  height: 1346px;
+.container_entree-note_size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  width: 95%;
+  max-width: 450px;
+  margin: auto;
+  margin-top: 14px;
+  margin-bottom: 35px;
+  animation-name: apparition-menu;
+  animation-duration: 3000ms;
+  animation-iteration-count: 1;
+}
+@media screen and (min-width: 1024px) {
+  .container_entree-note_size {
+    width: 30%;
+    margin-top: 100px;
+  }
 }
 
 .container_entree_size {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 335px;
+  gap: 14px;
   width: 95%;
+  max-width: 450px;
   margin: auto;
   margin-top: 14px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+  animation-name: apparition-menu;
+  animation-duration: 3000ms;
+  animation-iteration-count: 1;
+}
+@media screen and (min-width: 1024px) {
+  .container_entree_size {
+    width: 30%;
+    margin-top: 100px;
+  }
 }
 
 .container_plat_size {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 250px;
+  gap: 14px;
   width: 95%;
+  max-width: 450px;
   margin: auto;
   margin-top: 14px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+  animation-name: apparition-menu;
+  animation-duration: 2500ms;
+  animation-iteration-count: 1;
+  animation-delay: 500ms;
+  animation-fill-mode: backwards;
+}
+@media screen and (min-width: 1024px) {
+  .container_plat_size {
+    width: 30%;
+    margin-top: 100px;
+  }
+}
+
+.container_dessert_size {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 95%;
+  max-width: 450px;
+  margin: auto;
+  margin-top: 14px;
+  margin-bottom: 25px;
+  animation-name: apparition-menu;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+  animation-delay: 1000ms;
+  animation-fill-mode: backwards;
+}
+@media screen and (min-width: 1024px) {
+  .container_dessert_size {
+    width: 30%;
+    margin-top: 100px;
+  }
 }
 
 .tile_menu {
+  cursor: pointer;
   height: 72px;
   background-color: white;
   border-radius: 16px;
   box-shadow: 1px 4px 10px 0px #e7e7e7;
+}
+.tile_menu:hover > .coche {
+  animation-name: movement_coche;
+  animation-duration: 800ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  transform-origin: right 50%;
+}
+@media screen and (min-width: 1024px) {
+  .tile_menu {
+    height: 72px;
+  }
+}
+
+.prix_position {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

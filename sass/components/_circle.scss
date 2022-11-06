@@ -6,4 +6,20 @@
     background: #9356DC;
     position: absolute;
     left: 19px;
+
+    @media screen and (min-width:1024px) {
+
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.modif_cercle_color {
+
+    background: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

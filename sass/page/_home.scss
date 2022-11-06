@@ -1,6 +1,17 @@
 body {
     margin: auto;
-    width: 100%;
+    width: auto;
+    animation-name: hiding-body;
+    animation-duration: 2000ms;
+    animation-delay: 2000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+
+    :not(.loader) {
+
+        opacity: 0;
+        height: 0;
+    }
 }
 
 html {
@@ -13,16 +24,24 @@ html {
 
     gap: 20px;
     width: 100%;
+    max-width: 400px;
     margin: auto;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     position: relative;
 
+    @media screen and (min-width:768px) {
+
+        width: 40%;
+        margin-bottom: 20px;
+
+    }
 }
 
 .tile {
 
+    max-width: 400px;
     width: 88%;
     height: 75px;
     margin: auto;
@@ -36,6 +55,20 @@ html {
         color: black;
         font-family: "Roboto";
         font-weight: 700;
+        font-size: 18px;
+
+        @media screen and (min-width:1024px) {
+
+            font-size: 20px;
+            width: 234px;
+
+        }
+    }
+
+    @media screen and (min-width:768px) {
+
+        height: 105px;
+
     }
 
 }
@@ -58,6 +91,32 @@ html {
         color: white;
         font-size: 13px;
         font-family: "Roboto";
+
+        @media screen and (min-width:1024px) {
+
+            left: 10px;
+            top: -20px;
+            font-size: 18px;
+
+        }
+    }
+
+    @media screen and (min-width:768px) {
+
+        height: 105px;
+        width: 100%;
+
+    }
+
+    & i {
+
+        padding-left: 20px;
+
+        @media screen and (min-width:768px) {
+
+            padding-left: 15px;
+
+        }
     }
 }
 
@@ -69,22 +128,47 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     justify-content: space-between;
 
+    @media screen and (min-width:768px) {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        max-width: 1000px;
+
+    }
 }
 
 .sizecard_restaurant {
 
     height: 245px;
     width: 92%;
+    max-width: 450px;
     margin-top: 20px;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
     box-shadow: 1px 4px 10px 8px #e7e7e7;
+    position: relative;
+    text-decoration: none;
 
+    & i:hover {
+
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-size: 100%;
+        background-clip: text;
+        color: transparent;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width:768px) {
+
+        width: 49%;
+        height: 280px;
+
+    }
 }
 
 .img_size {
@@ -98,8 +182,27 @@ html {
 
 .body_size {
 
-    height: 55px;
-    width: 87%;
-    position: absolute;
+    height: 73px;
+    width: 92%;
+    text-decoration: none;
+    display: inline-block;
 
+    @media screen and (min-width:768px) {
+
+        height: 84px;
+
+    }
+
+    & i {
+
+        font-size: 25px;
+        padding-top: 23px;
+        color: black;
+    }
+}
+
+svg {
+
+    width: 6%;
+    padding-top: 22px;
 }

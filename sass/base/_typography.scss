@@ -2,6 +2,12 @@ h1 {
 
     font-family: "Shrikhand";
     text-align: center;
+    margin-bottom: 10px;
+
+    @media screen and (min-width:768px) {
+
+        font-size: 60px;
+    }
 
 }
 
@@ -13,10 +19,13 @@ h2 {
     margin-right: 246px;
     font-family: "Roboto";
 
-    & i {
 
-        position: absolute;
-        right: 30px;
+    @media screen and (min-width:768px) {
+
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 40px;
     }
 }
 
@@ -26,6 +35,13 @@ h2.modif_title {
     font-size: 28px;
     font-weight: normal;
     margin: 50px 0 30px 0px;
+
+    @media screen and (min-width:1024px) {
+
+        font-size: 36px;
+        margin: 0;
+
+    }
 
 }
 
@@ -40,10 +56,23 @@ h3 {
     & i {
 
         position: absolute;
-        right: 10px;
+        right: -8%;
         top: 25px;
         font-size: 22px;
 
+        @media screen and (min-width:768px) {
+
+            position: absolute;
+            left: 190%;
+            top: 25px;
+            font-size: 22px;
+        }
+
+    }
+
+    @media screen and (min-width:1024px) {
+
+        font-size: 18px;
     }
 }
 
@@ -56,6 +85,13 @@ h4 {
     padding: 16px 0 0 20px;
     margin: 0 0 0 0;
 
+    @media screen and (min-width:768px) {
+
+        text-align: center;
+        font-size: 24px;
+
+    }
+
 }
 
 p {
@@ -63,15 +99,8 @@ p {
     color: #606060;
     font-family: "Roboto";
     margin: 0 0 0 10px;
-    width: 176px;
+    width: 215px;
 
-    & span {
-
-        position: absolute;
-        right: 25px;
-        color: black;
-        font-weight: bold;
-    }
 }
 
 p.modif {
@@ -85,6 +114,13 @@ p.modif {
     font-size: 26px;
     color: black;
     font-weight: bold;
+
+    @media screen and (min-width:1024px) {
+
+        font-size: 30px;
+        width: 300px;
+
+    }
 }
 
 p.alternative {
@@ -95,21 +131,33 @@ p.alternative {
     font-size: 20px;
     font-weight: initial;
     width: 100%;
+
+    @media screen and (min-width:1024px) {
+
+        font-size: 30px;
+
+    }
 }
 
 p.retour {
 
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 15px;
+    top: 30px;
+    font-size: 20px;
 }
 
 .menu_boxsize p {
 
-    margin-left: 20px;
     border-bottom: 3px solid #99E2D0;
     width: 40px;
     padding-bottom: 4px;
+}
+
+.body_size h3 {
+
+    text-align: initial;
+    margin-bottom: 0px;
 }
 
 .tile_menu p {
@@ -117,6 +165,10 @@ p.retour {
     margin-left: 10px;
     width: auto;
     border-bottom: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
 }
 
 ul {
@@ -127,29 +179,25 @@ ul {
     list-style-type: none;
     line-height: 1.7;
     font-size: 12px;
+    margin-bottom: 0;
+
+    @media screen and (min-width:768px) {
+
+        text-align: center;
+        font-size: 16px;
+
+    }
 
 }
 
-a {
+ul a {
 
     color: white;
     text-decoration: none;
 }
 
-.fa-cutlery:before,
-.fa-utensils:before {
-    content: "\f2e7";
-    font-size: 11px;
-}
+span {
 
-.fa-hands-helping:before,
-.fa-handshake-angle:before {
-    content: "\f4c4";
-    font-size: 8px;
-}
-
-.fa-mobile-alt:before,
-.fa-mobile-screen-button:before {
-    content: "\f3cd";
-    font-size: large;
+    font-weight: bold;
+    font-family: 'Roboto';
 }

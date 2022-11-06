@@ -2,8 +2,13 @@ body {
 
     margin: auto;
     width: auto;
-    position: relative;
+    background-color: #f6f6f6;
 
+}
+
+main {
+
+    background-color: #f6f6f6;
 }
 
 .restaurant {
@@ -16,37 +21,125 @@ body {
 
 img {
 
+    display: block;
     width: 100%;
     margin: auto;
+
+    @media screen and (min-width:768px) {
+
+        width: 70%;
+    }
+
+    @media screen and (min-width:1024px) {
+
+        font-size: 22px;
+        width: 60%;
+    }
+
+}
+
+.modif_note_img {
+
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    margin: auto;
+
+    @media screen and (min-width:768px) {
+
+        width: 70%;
+    }
+
+    @media screen and (min-width:1024px) {
+
+        width: 70%;
+    }
+
 }
 
 .menu_boxsize {
 
     display: flex;
     flex-direction: column;
-    height: 1275px;
+    margin-bottom: 20px;
     width: 100%;
     margin: auto;
     background-color: #f6f6f6;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    position: relative;
+    bottom: 50px;
+
+    @media screen and (min-width:1024px) {
+
+        flex-direction: row;
+        margin-top: 100px;
+
+    }
+
+    & i {
+
+        color: black;
+        font-size: 25px;
+
+        &:hover {
+
+            background-image: linear-gradient(#FF79DA, #9356DC);
+            background-size: 100%;
+            background-clip: text;
+            color: transparent;
+            cursor: pointer;
+        }
+    }
 }
 
-.modif_size {
+.container_entree-note_size {
 
-    height: 1346px
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    width: 95%;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 35px;
+
+    animation-name: apparition-menu;
+    animation-duration: 3000ms;
+    animation-iteration-count: 1;
+
+    @media screen and (min-width:1024px) {
+
+        width: 30%;
+        margin-top: 100px;
+    }
+
 }
 
 .container_entree_size {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 335px;
+    gap: 14px;
     width: 95%;
+    max-width: 450px;
     margin: auto;
     margin-top: 14px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+
+    animation-name: apparition-menu;
+    animation-duration: 3000ms;
+    animation-iteration-count: 1;
+
+
+
+
+    @media screen and (min-width:1024px) {
+
+        width: 30%;
+        margin-top: 100px;
+    }
 
 }
 
@@ -54,19 +147,89 @@ img {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 250px;
+    gap: 14px;
     width: 95%;
+    max-width: 450px;
     margin: auto;
     margin-top: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+
+    animation-name: apparition-menu;
+    animation-duration: 2500ms;
+    animation-iteration-count: 1;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+
+
+
+
+    @media screen and (min-width:1024px) {
+
+        width: 30%;
+        margin-top: 100px;
+    }
+
+}
+
+.container_dessert_size {
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 95%;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 25px;
+
+    animation-name: apparition-menu;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+
+
+    @media screen and (min-width:1024px) {
+
+        width: 30%;
+        margin-top: 100px;
+    }
 
 }
 
 .tile_menu {
 
+    cursor: pointer;
     height: 72px;
     background-color: white;
     border-radius: 16px;
     box-shadow: 1px 4px 10px 0px #e7e7e7;
+
+    &:hover {
+
+        &>.coche {
+
+            animation-name: movement_coche;
+            animation-duration: 800ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+            transform-origin: right 50%;
+
+        }
+
+
+    }
+
+    @media screen and (min-width:1024px) {
+
+        height: 72px;
+    }
+}
+
+.prix_position {
+
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px
 }

@@ -1,0 +1,121 @@
+@keyframes left-right {
+
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(3px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+
+@keyframes apparition-menu {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+
+    }
+
+    10% {
+
+        opacity: 0;
+    }
+
+    20% {
+
+        opacity: 0;
+    }
+
+    30% {
+
+        opacity: 0;
+    }
+
+    40% {
+
+        opacity: 0.4;
+    }
+
+    50% {
+
+        opacity: 0.5;
+    }
+
+    60% {
+
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes movement_coche {
+
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+        /*transform: translateX(60px);*/
+    }
+
+    50% {
+
+        opacity: 1;
+        transform: scaleX(0.5);
+        /*transform: translateX(35px);*/
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: scaleX(1);
+        /*transform: translateX(0px); */
+    }
+}
+
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
