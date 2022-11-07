@@ -804,15 +804,11 @@ footer i {
 body {
   margin: auto;
   width: auto;
-  animation-name: hiding-body;
-  animation-duration: 2000ms;
-  animation-delay: 2000ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: backwards;
-}
-body :not(.loader) {
-  opacity: 0;
-  height: 0;
+  /*:not(.loader) {
+
+      opacity: 0;
+      height: 0;
+  }*/
 }
 
 html {
