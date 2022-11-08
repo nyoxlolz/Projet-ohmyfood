@@ -933,7 +933,7 @@ html {
 .sizecard_restaurant i:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-size: 100%;
-  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
 }
@@ -1050,7 +1050,7 @@ img {
 .menu_boxsize i:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-size: 100%;
-  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
 }
