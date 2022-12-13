@@ -1,3 +1,42 @@
+.coeur-list {
+
+
+
+    .coeur {
+
+        color: black;
+        position: absolute;
+        right: 25px;
+        bottom: 30px;
+
+        &--plein {
+
+            background: linear-gradient(#FF79DA, #9356DC);
+            -webkit-background-clip: text;
+            background-size: 100%;
+            color: transparent;
+            opacity: 0;
+
+        }
+    }
+
+    &:hover {
+        &>.coeur--vide {
+
+            display: none;
+        }
+
+        &>.coeur--plein {
+
+            //translate: 29px;
+            opacity: 1;
+
+
+        }
+    }
+
+}
+
 /*ICONE FOOTER*/
 .fa-cutlery:before,
 .fa-utensils:before {
@@ -33,28 +72,29 @@
 
     @media screen and (min-width:1024px) {
 
-        max-width: 100%;
+
         position: absolute;
         justify-content: space-evenly;
 
     }
 
-    & i {
 
-        font-size: 25px;
+    @media screen and (min-width:1024px) {
 
+        font-size: 35px;
 
-        @media screen and (min-width:1024px) {
-
-            font-size: 35px;
-
-        }
     }
 }
+
 
 .icone_card_position {
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#position_coeur .coeur {
+
+    position: initial;
 }

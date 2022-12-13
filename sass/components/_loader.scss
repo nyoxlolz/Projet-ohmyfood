@@ -5,28 +5,27 @@
     border-top: 10px solid #9356DC;
     border-left: 10px solid #FF79DA;
     border-right: 10px solid #99E2D0;
-    border-bottom: 10px solid white;
+    border-bottom: 10px solid black;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     display: flex;
     align-items: center;
-
     margin: auto;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 5000;
 
+    overflow: hidden;
     animation-name: spin;
-    animation-duration: 2.5s;
-    animation-delay: 150ms;
+    animation-duration: 1000ms;
     animation-timing-function: ease;
-    animation-iteration-count: infinite;
-}
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
 
-.loading {
 
-    align-content: center;
+
 }

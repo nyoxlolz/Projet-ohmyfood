@@ -29,36 +29,29 @@
     0% {
         opacity: 0;
         transform: translateY(-50px);
-
     }
 
     10% {
-
         opacity: 0;
     }
 
     20% {
-
         opacity: 0;
     }
 
     30% {
-
         opacity: 0;
     }
 
     40% {
-
         opacity: 0.4;
     }
 
     50% {
-
         opacity: 0.5;
     }
 
     60% {
-
         opacity: 0.6;
     }
 
@@ -80,42 +73,65 @@
 
 }
 
-@keyframes movement_coche {
+@keyframes rotate {
 
     0% {
-        opacity: 0;
-        transform: scaleX(0);
-        /*transform: translateX(60px);*/
-    }
-
-    50% {
-
-        opacity: 1;
-        transform: scaleX(0.5);
-        /*transform: translateX(35px);*/
+        transform: rotate(0.5turn);
     }
 
     100% {
-
-        opacity: 1;
-        transform: scaleX(1);
-        /*transform: translateX(0px); */
+        transform: rotate(1turn);
     }
-}
 
+}
 
 @keyframes spin {
 
     0% {
-        transform: rotate(0deg);
+
+        overflow: hidden;
+        visibility: visible;
+        transform: rotate(0deg)
     }
 
-    50% {
+    80% {
+        overflow: hidden;
+        visibility: visible;
+    }
 
-        transform: rotate(360deg);
+    90% {
+        overflow: hidden;
+        visibility: visible;
     }
 
     100% {
-        transform: rotate(360deg);
+        overflow: hidden;
+        visibility: hidden;
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes fade-in {
+
+
+    0% {
+        height: 600px;
+        visibility: hidden;
+    }
+
+    80% {
+        height: 600px;
+        visibility: hidden;
+    }
+
+    90% {
+        height: 600px;
+        visibility: hidden;
+    }
+
+    100% {
+
+        visibility: visible;
+
     }
 }

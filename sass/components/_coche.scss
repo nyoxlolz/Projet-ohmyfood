@@ -4,13 +4,10 @@
     border-bottom-right-radius: 16px;
     background-color: #99e2d0;
     height: 72px;
-    width: 60px;
-    position: relative;
-    margin-inline-start: auto;
-    bottom: 61px;
-    /*bottom: 40px;*/
+    width: 0%;
     display: flex;
     align-items: center;
-    opacity: 0;
+    justify-content: center;
+    transition: all 450ms;
 
 }

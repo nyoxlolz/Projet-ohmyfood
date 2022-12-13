@@ -204,25 +204,49 @@ img {
     background-color: white;
     border-radius: 16px;
     box-shadow: 1px 4px 10px 0px #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+
+
+    &_content {
+
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 
     &:hover {
 
         &>.coche {
 
-            animation-name: movement_coche;
-            animation-duration: 800ms;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
-            animation-fill-mode: both;
-            transform-origin: right 50%;
-
+            width: 25%;
         }
 
+        & .modif_cercle_color {
+
+            opacity: 1;
+            width: 24px;
+            animation-name: rotate;
+            animation-duration: 350ms;
+            animation-iteration-count: 1;
+            animation-delay: 100ms;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+
+        display: flex;
+        justify-content: space-between;
+        height: 72px;
 
     }
 
     @media screen and (min-width:1024px) {
 
+        display: flex;
+        justify-content: space-between;
         height: 72px;
     }
 }
@@ -231,5 +255,5 @@ img {
 
     display: flex;
     justify-content: space-between;
-    padding-right: 20px
+    padding-right: 20px;
 }

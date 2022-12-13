@@ -17,9 +17,12 @@
 .modif_cercle_color {
 
     background: white;
-    width: 24px;
+    width: 0px;
     height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: unset;
+    opacity: 0;
+
 }
