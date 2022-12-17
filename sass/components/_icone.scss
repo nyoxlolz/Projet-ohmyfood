@@ -18,6 +18,18 @@
             opacity: 0;
 
         }
+
+        @media screen and (min-width:768px) {
+
+            position: absolute;
+
+        }
+
+        @media screen and (min-width:1024px) {
+
+            position: absolute;
+
+        }
     }
 
     &:hover {
@@ -36,6 +48,7 @@
     }
 
 }
+
 
 /*ICONE FOOTER*/
 .fa-cutlery:before,
@@ -65,23 +78,27 @@
 .icone_position {
 
     display: flex;
-    align-items: baseline;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
+    max-width: 90%;
     margin: auto;
+    position: relative;
+    font-size: 26px;
+    margin-bottom: 60px;
 
-    @media screen and (min-width:1024px) {
+    @media screen and (min-width:768px) {
 
-
-        position: absolute;
+        margin-bottom: 60px;
         justify-content: space-evenly;
+        width: 50%;
 
     }
 
-
     @media screen and (min-width:1024px) {
 
-        font-size: 35px;
+        margin-top: 60px;
+        justify-content: space-evenly;
+        width: 50%;
 
     }
 }
@@ -92,9 +109,4 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-#position_coeur .coeur {
-
-    position: initial;
 }

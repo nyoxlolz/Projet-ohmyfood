@@ -77,20 +77,6 @@ img {
 
     }
 
-    & i {
-
-        color: black;
-        font-size: 25px;
-
-        &:hover {
-
-            background-image: linear-gradient(#FF79DA, #9356DC);
-            background-size: 100%;
-            -webkit-background-clip: text;
-            color: transparent;
-            cursor: pointer;
-        }
-    }
 }
 
 .container_entree-note_size {
