@@ -22,7 +22,7 @@ html {
 
     gap: 20px;
     width: 100%;
-    max-width: 400px;
+
     margin: auto;
     margin-top: 40px;
     display: flex;
@@ -31,21 +31,28 @@ html {
 
     @media screen and (min-width:768px) {
 
-
+        max-width: 400px;
         margin-bottom: 20px;
 
+    }
+
+    @media screen and (min-width:1024px) {
+
+        max-width: 400px;
     }
 }
 
 .tile {
 
-
+    cursor: pointer;
     width: 88%;
     margin: auto;
     margin-left: 30px;
     border-radius: 18px;
     background-color: #f6f6f6;
     box-shadow: 8px 10px 10px -6px #dfdddd;
+
+
 
     & p {
 
@@ -69,6 +76,16 @@ html {
 
     }
 
+}
+
+.tile:hover {
+
+    background-color: #f5edff;
+
+    & i {
+
+        color: #9356dc;
+    }
 }
 
 .inside_tile {
@@ -118,7 +135,6 @@ html {
 .restaurant_boxsize {
 
     width: 100%;
-    max-width: 400px;
     margin: auto;
     padding-bottom: 60px;
     display: flex;
@@ -140,7 +156,6 @@ html {
 
     height: 245px;
     width: 92%;
-    max-width: 450px;
     margin-top: 20px;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
